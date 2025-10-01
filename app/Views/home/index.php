@@ -16,6 +16,8 @@
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
@@ -52,6 +54,7 @@
   </style>
 
   <div class="container my-3">
+    <!-- Identificación de necesidades de formación y capacitación -->
     <div class="card">
       <div class="card-header bg-primary text-light">
         <h4>Identificación de necesidades de formación y capacitación</h4>
@@ -89,6 +92,9 @@
       </div>
     </div> <!-- .card -->
 
+    <form action="<?= base_url() ?>encuesta/agregar" id="form-encuesta" autocomplete="off" method="post">
+
+    <!-- I. Información de la empresa -->
     <div class="card my-3">
       <div class="card-header bg-header p-3">
         <h5 class="mb-0">I. Información de la empresa</h5>
@@ -107,21 +113,21 @@
             <div class="input-group">
               <div class="form-floating">
                 <input type="text" id="ruc" name="ruc" class="form-control" placeholder="RUC" minlength="11"
-                  maxlength="11" pattern="[0-9]+" autofocus>
+                  maxlength="11" pattern="[0-9]+" required autofocus>
                 <label for="ruc">RUC</label>
               </div>
-              <button class="btn btn-outline-success"><i class="fa-solid fa-magnifying-glass"></i></button>
+              <button class="btn btn-outline-success" type="button" id="buscar-empresa"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-floating">
-              <input type="text" id="razonsocial" name="razonsocial" class="form-control">
-              <label for="razonsocial">Razon social</label>
+              <input type="text" id="razonsocial" name="razonsocial" class="form-control" required>
+              <label for="razonsocial" id="label-razonsocial">Razon social</label>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-floating">
-              <input type="text" id="nombrecomercial" name="nombrecomercial" class="form-control">
+              <input type="text" id="nombrecomercial" name="nombrecomercial" class="form-control" required>
               <label for="nombrecomercial">Nombre comercial</label>
             </div>
           </div>
@@ -235,7 +241,7 @@
       </div> <!-- .card-body -->
     </div> <!-- .card -->
 
-    <!-- Área agrícola -->
+    <!-- II. Información del puesto en el área agrícola -->
     <div class="card my-3">
       <div class="card-header bg-header p-3">
         <h5 class="mb-0">II. Información del puesto en el área agrícola</h5>
@@ -266,57 +272,42 @@
               <tr>
                 <td class="align-middle">Regador</td>
                 <td>
-                  <select name="s2_reg_dsp" id="s2_reg_dsp" class="form-select rounded-0">
-                    <option value="C">Crítico</option>
-                    <option value="M">Muy crítico</option>
-                    <option value="A">Altamente crítico</option>
+                  <select name="s2_reg_dsp" id="s2_reg_dsp" class="form-select rounded-0" required>
                   </select>
                 </td>
-                <td><input type="number" id="s2_reg_num" name="s2_reg_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
+                <td><input type="number" id="s2_reg_num" name="s2_reg_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0" required></td>
               </tr>
               <tr>
                 <td class="align-middle">Operador de sistemas de riego</td>
                 <td>
-                  <select name="s2_reg_num" id="s2_reg_num" class="form-select rounded-0">
-                    <option value="C">Crítico</option>
-                    <option value="M">Muy crítico</option>
-                    <option value="A">Altamente crítico</option>
+                  <select name="s2_reg_num" id="s2_reg_num" class="form-select rounded-0" required>
                   </select>
                 </td>
-                <td><input type="number" id="s2_osr_num" name="s2_osr_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0"></td>
+                <td><input type="number" id="s2_osr_num" name="s2_osr_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0" required></td>
               </tr>
               <tr>
                 <td class="align-middle">Evaluador fitosanitario</td>
                 <td>
-                  <select name="s2_efi_dsp" id="s2_efi_dsp" class="form-select rounded-0">
-                    <option value="C">Crítico</option>
-                    <option value="M">Muy crítico</option>
-                    <option value="A">Altamente crítico</option>
+                  <select name="s2_efi_dsp" id="s2_efi_dsp" class="form-select rounded-0" required>
                   </select>
                 </td>
-                <td><input type="number" id="s2_efi_num" name="s2_efi_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
+                <td><input type="number" id="s2_efi_num" name="s2_efi_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0" required></td>
               </tr>
               <tr>
                 <td class="align-middle">Aplicador fitosanitario</td>
                 <td>
-                  <select name="s2_afi_dsp" id="s2_afi_dsp" class="form-select rounded-0">
-                    <option value="C">Crítico</option>
-                    <option value="M">Muy crítico</option>
-                    <option value="A">Altamente crítico</option>
+                  <select name="s2_afi_dsp" id="s2_afi_dsp" class="form-select rounded-0" required>
                   </select>
                 </td>
-                <td><input type="number" id="s2_afi_num" name="s2_afi_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0"></td>
+                <td><input type="number" id="s2_afi_num" name="s2_afi_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0" required></td>
               </tr>
               <tr>
                 <td class="align-middle">Líderes de cosecha</td>
                 <td>
-                  <select name="s2_lco_dsp" id="s2_lco_dsp" class="form-select rounded-0">
-                    <option value="C">Crítico</option>
-                    <option value="M">Muy crítico</option>
-                    <option value="A">Altamente crítico</option>
+                  <select name="s2_lco_dsp" id="s2_lco_dsp" class="form-select rounded-0" required>
                   </select>
                 </td>
-                <td><input type="number" id="s2_lco_num" name="s2_lco_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0"></td>
+                <td><input type="number" id="s2_lco_num" name="s2_lco_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0" required></td>
               </tr>
               <tr>
                 <td class="align-middle">
@@ -324,9 +315,6 @@
                 </td>
                 <td>
                   <select name="s2_ooc_dsp" id="s2_ooc_dsp" class="form-select rounded-0" disabled>
-                    <option value="C">Crítico</option>
-                    <option value="M">Muy crítico</option>
-                    <option value="A">Altamente crítico</option>
                   </select>
                 </td>
                 <td><input type="number" id="s2_ooc_num" name="s2_ooc_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0" disabled></td>
@@ -358,24 +346,18 @@
             <tr>
               <td class="align-middle">Operador de maquinaria agrícola</td>
               <td>
-                <select name="s2_oma_dsp" id="s2_oma_dsp" class="form-select rounded-0">
-                  <option value="C">Crítico</option>
-                  <option value="M">Muy crítico</option>
-                  <option value="A">Altamente crítico</option>
+                <select name="s2_oma_dsp" id="s2_oma_dsp" class="form-select rounded-0" required>
                 </select>
               </td>
-              <td><input type="number" id="s2_oma_num" name="s2_oma_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
+              <td><input type="number" id="s2_oma_num" name="s2_oma_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0" required></td>
             </tr>
             <tr>
               <td class="align-middle">Inspector de calidad de sistemas de riego</td>
               <td>
-                <select name="s2_ins_dsp" id="s2_ins_dsp" class="form-select rounded-0">
-                  <option value="C">Crítico</option>
-                  <option value="M">Muy crítico</option>
-                  <option value="A">Altamente crítico</option>
+                <select name="s2_ins_dsp" id="s2_ins_dsp" class="form-select rounded-0" required>
                 </select>
               </td>
-              <td><input type="number" id="s2_ins_num" name="s2_ins_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0"></td>
+              <td><input type="number" id="s2_ins_num" name="s2_ins_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0" required></td>
             </tr>
             <tr>
               <td class="align-middle">
@@ -383,9 +365,6 @@
               </td>
               <td>
                 <select name="s2_otc_dsp" id="s2_otc_dsp" class="form-select rounded-0" disabled>
-                  <option value="C">Crítico</option>
-                  <option value="M">Muy crítico</option>
-                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
               <td><input type="number" id="s2_otc_num" name="s2_otc_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0" disabled></td>
@@ -396,6 +375,7 @@
       </div> <!-- ./card-body -->
     </div> <!-- /.card área agrícola -->
 
+    <!-- III. Información del puesto en el área industrial -->
     <div class="card">
       <div class="card-header bg-header p-3">
         <h5 class="mb-0">III. Información del puesto en el área industrial</h5>
@@ -424,24 +404,18 @@
             <tr>
               <td class="align-middle">Operadores de montacarga</td>
               <td>
-                <select name="s3_omo_dsp" id="s3_omo_dsp" class="form-select rounded-0">
-                  <option value="C">Crítico</option>
-                  <option value="M">Muy crítico</option>
-                  <option value="A">Altamente crítico</option>
+                <select name="s3_omo_dsp" id="s3_omo_dsp" class="form-select rounded-0" required>
                 </select>
               </td>
-              <td><input type="number" id="s3_omo_num" name="s3_omo_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
+              <td><input type="number" id="s3_omo_num" name="s3_omo_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0" required></td>
             </tr>
             <tr>
               <td class="align-middle">Operador de sistemas de riego</td>
               <td>
-                <select name="s3_osr_dsp" id="s3_osr_dsp" class="form-select rounded-0">
-                  <option value="C">Crítico</option>
-                  <option value="M">Muy crítico</option>
-                  <option value="A">Altamente crítico</option>
+                <select name="s3_osr_dsp" id="s3_osr_dsp" class="form-select rounded-0" required>
                 </select>
               </td>
-              <td><input type="number" id="s3_osr_num" name="s3_osr_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0"></td>
+              <td><input type="number" id="s3_osr_num" name="s3_osr_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0" required></td>
             </tr>
             <tr>
               <td class="align-middle">
@@ -449,9 +423,6 @@
               </td>
               <td>
                 <select name="s3_ooc_dsp" id="s3_ooc_dsp" class="form-select rounded-0" disabled>
-                  <option value="C">Crítico</option>
-                  <option value="M">Muy crítico</option>
-                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
               <td><input type="number" id="s3_ooc_num" name="s3_ooc_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0" disabled></td>
@@ -482,46 +453,34 @@
             <tr>
               <td class="align-middle">Frigoristas</td>
               <td>
-                <select name="s3_fri_dsp" id="s3_fri_dsp" class="form-select rounded-0">
-                  <option value="C">Crítico</option>
-                  <option value="M">Muy crítico</option>
-                  <option value="A">Altamente crítico</option>
+                <select name="s3_fri_dsp" id="s3_fri_dsp" class="form-select rounded-0" required>
                 </select>
               </td>
-              <td><input type="number" id="s3_fri_num" name="s3_fri_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
+              <td><input type="number" id="s3_fri_num" name="s3_fri_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0" required></td>
             </tr>
             <tr>
               <td class="align-middle">Calderista</td>
               <td>
-                <select name="s3_cal_dsp" id="s3_cal_dsp" class="form-select rounded-0">
-                  <option value="C">Crítico</option>
-                  <option value="M">Muy crítico</option>
-                  <option value="A">Altamente crítico</option>
+                <select name="s3_cal_dsp" id="s3_cal_dsp" class="form-select rounded-0" required>
                 </select>
               </td>
-              <td><input type="number" id="s3_cal_num" name="s3_cal_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0"></td>
+              <td><input type="number" id="s3_cal_num" name="s3_cal_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0" required></td>
             </tr>
             <tr>
               <td class="align-middle">Auxiliar de producción</td>
               <td>
-                <select name="s3_aux_dsp" id="s3_aux_dsp" class="form-select rounded-0">
-                  <option value="C">Crítico</option>
-                  <option value="M">Muy crítico</option>
-                  <option value="A">Altamente crítico</option>
+                <select name="s3_aux_dsp" id="s3_aux_dsp" class="form-select rounded-0" required>
                 </select>
               </td>
-              <td><input type="number" id="s3_aux_num" name="s3_aux_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
+              <td><input type="number" id="s3_aux_num" name="s3_aux_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0" required></td>
             </tr>
             <tr>
               <td class="align-middle">Inspector de calidad</td>
               <td>
-                <select name="s3_ica_dsp" id="s3_ica_dsp" class="form-select rounded-0">
-                  <option value="C">Crítico</option>
-                  <option value="M">Muy crítico</option>
-                  <option value="A">Altamente crítico</option>
+                <select name="s3_ica_dsp" id="s3_ica_dsp" class="form-select rounded-0" required>
                 </select>
               </td>
-              <td><input type="number" id="s3_ica_num" name="s3_ica_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
+              <td><input type="number" id="s3_ica_num" name="s3_ica_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0" required></td>
             </tr>
             <tr>
               <td class="align-middle">
@@ -529,9 +488,6 @@
               </td>
               <td>
                 <select name="s3_otc_dsp" id="s3_otc_dsp" class="form-select rounded-0" disabled>
-                  <option value="C">Crítico</option>
-                  <option value="M">Muy crítico</option>
-                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
               <td><input type="number" id="s3_otc_num" name="s3_otc_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0" disabled></td>
@@ -542,6 +498,7 @@
       </div> <!-- ./card-body -->
     </div> <!-- ./card -->
 
+    <!-- IV. Información de puestos transversales -->
     <div class="card my-3">
       <div class="card-header bg-header p-3">
         <h5 class="mb-0">IV. Información de puestos transversales</h5>
@@ -571,24 +528,18 @@
             <tr>
               <td class="align-middle">Digitador</td>
               <td>
-                <select name="s4_dig_dsp" id="s4_dig_dsp" class="form-select rounded-0">
-                  <option value="C">Crítico</option>
-                  <option value="M">Muy crítico</option>
-                  <option value="A">Altamente crítico</option>
+                <select name="s4_dig_dsp" id="s4_dig_dsp" class="form-select rounded-0" required>
                 </select>
               </td>
-              <td><input type="number" id="s4_dig_num" name="s4_dig_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
+              <td><input type="number" id="s4_dig_num" name="s4_dig_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0" required></td>
             </tr>
             <tr>
               <td class="align-middle">Operario de aplicaciones</td>
               <td>
-                <select name="s4_oap_dsp" id="s4_oap_dsp" class="form-select rounded-0">
-                  <option value="C">Crítico</option>
-                  <option value="M">Muy crítico</option>
-                  <option value="A">Altamente crítico</option>
+                <select name="s4_oap_dsp" id="s4_oap_dsp" class="form-select rounded-0" required>
                 </select>
               </td>
-              <td><input type="number" id="s4_oap_num" name="s4_oap_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0"></td>
+              <td><input type="number" id="s4_oap_num" name="s4_oap_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0" required></td>
             </tr>
             <tr>
               <td class="align-middle">
@@ -596,9 +547,6 @@
               </td>
               <td>
                 <select name="s4_ooc_dsp" id="s4_ooc_dsp" class="form-select rounded-0" disabled>
-                  <option value="C">Crítico</option>
-                  <option value="M">Muy crítico</option>
-                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
               <td><input type="number" id="s4_ooc_num" name="s4_ooc_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0" disabled></td>
@@ -629,13 +577,10 @@
             <tr>
               <td class="align-middle">Auxiliar administrativo</td>
               <td>
-                <select name="s4_aux_dsp" id="s4_aux_dsp" class="form-select rounded-0">
-                  <option value="C">Crítico</option>
-                  <option value="M">Muy crítico</option>
-                  <option value="A">Altamente crítico</option>
+                <select name="s4_aux_dsp" id="s4_aux_dsp" class="form-select rounded-0" required>
                 </select>
               </td>
-              <td><input type="number" id="s4_aux_num" name="s4_aux_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
+              <td><input type="number" id="s4_aux_num" name="s4_aux_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0" required></td>
             </tr>
             <tr>
               <td class="align-middle">
@@ -643,9 +588,6 @@
               </td>
               <td>
                 <select name="s4_otc_dsp" id="s4_otc_dsp" class="form-select rounded-0" disabled>
-                  <option value="C">Crítico</option>
-                  <option value="M">Muy crítico</option>
-                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
               <td><input type="number" id="s4_otc_num" name="s4_otc_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0" disabled></td>
@@ -657,16 +599,83 @@
 
       <div class="card-footer text-end">
         <button class="btn btn-outline-secondary" type="reset">Reiniciar</button>
-        <button class="btn btn-primary" type="reset">Guardar</button>
+        <button class="btn btn-primary" type="submit">Guardar</button>
       </div>
     </div> <!-- ./card -->
 
+    </form>
   </div> <!-- .container -->
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+
+      const listasDisponibilidad = document.querySelectorAll('.form-select')
+      
+      function addItemsLists(){
+        const items = `
+          <option value='' selected>Seleccione</option>
+          <option value='C'>Crítico</option>
+          <option value='M'>Muy crítico</option>
+          <option value='A'>Altamente crítico</option>
+        `;
+        listasDisponibilidad.forEach(lista => {
+          lista.innerHTML = items
+        });
+      }
+
+      async function showToast(inputText = ``){
+        Swal.fire({
+          text: inputText,
+          icon: 'info',
+          toast: true,
+          position: 'top-end',
+          timer: 2500,
+          showConfirmButton: false,
+          background: '#f1c40f',
+          color: '#FFF',
+          iconColor: '#FFF',
+          timerProgressBar: true
+        })
+      }
+
       //Función de referencia directa
       function $(object){ return document.querySelector(`#${object}`) }
+
+      async function searchCompany(){
+        const ruc = $('ruc').value       
+        try{
+          if (ruc.length == 11){
+            $('label-razonsocial').innerHTML = 'Razon social | Buscando...'
+            const response = await fetch(`<?= base_url() ?>api/public/empresas/${ruc}`, {method: 'GET'})
+            if (!response.ok){
+              throw new Error('Problemas en el servicio')
+            }
+
+            const result = await response.json()
+            $('label-razonsocial').innerHTML = 'Razon social'
+
+            if (result.success){
+              $('razonsocial').value = result.data.razon_social
+              $('nombrecomercial').focus()
+            }else{
+              showToast('No encontrado')
+              $('razonsocial').value = ''
+              $('nombrecomercial').value = ''
+            }
+          }
+        }catch(error){
+          console.error(error)
+        }
+      } //searchCompany
+
+      $('ruc').addEventListener('keypress', (event) => {
+        if (event.key == 'Enter'){
+          searchCompany()
+        }
+      })
+
+      
+      $('buscar-empresa').addEventListener('click', searchCompany)
 
       //Especificación para S2
       $('s2_ooc_des').addEventListener('keyup', (event) => {
@@ -745,6 +754,29 @@
           $('s4_otc_num').removeAttribute('disabled')
         }
       })
+
+      $('form-encuesta').addEventListener('submit', (event) => {
+        event.preventDefault()
+
+        Swal.fire({
+          title: "¿Guardamos estos datos?",
+          text: "Encuesta sector agroindustria",
+          icon: "question",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Confirmar",
+          cancelButtonText: 'Cancelar',
+          footer: 'Versión 1.0'
+        }).then((result) => {
+          if (result.isConfirmed){
+            $('form-encuesta').submit()
+          }
+        })
+
+      })
+
+      addItemsLists()
 
     })
   </script>

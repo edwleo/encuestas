@@ -40,18 +40,18 @@ class APIController extends BaseController{
         $body = $response->getBody();
         $data = json_decode($body, true);
         return $this->response->setJSON(
-          ['status' => true, 'data' => $data]
+          ['success' => true, 'data' => $data]
         );
       }
     }
     catch(HTTPException $e){
       return $this->response->setJSON(
-        ['status' => false, 'message' => 'Problema acceso al servicio']
+        ['success' => false, 'message' => 'Problema acceso al servicio']
       );
     }
     catch(Exception $e){
       return $this->response->setJSON(
-        ['status' => false, 'message' => 'Imposible acceder al recurso']
+        ['success' => false, 'message' => 'Imposible acceder al recurso']
       );
     }
 
