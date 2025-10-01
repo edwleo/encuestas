@@ -212,7 +212,7 @@
                       <label for="esparrago" class="form-check-label mw">Espárrago</label>
                     </div>
                   </li>
-                  <li class="list-group-item bg-selected">
+                  <li class="list-group-item">
                     <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="uva" name="uva">
                       <label for="uva" class="form-check-label mw">Uva</label>
