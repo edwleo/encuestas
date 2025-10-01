@@ -323,13 +323,13 @@
                   <input type="text" id="s2_ooc_des" name="s2_ooc_des" class="form-control rounded-0" placeholder="Otro operario calificado, especificar:">
                 </td>
                 <td>
-                  <select name="s2_ooc_dsp" id="s2_ooc_dsp" class="form-select rounded-0">
+                  <select name="s2_ooc_dsp" id="s2_ooc_dsp" class="form-select rounded-0" disabled>
                     <option value="C">Crítico</option>
                     <option value="M">Muy crítico</option>
                     <option value="A">Altamente crítico</option>
                   </select>
                 </td>
-                <td><input type="number" id="s2_ooc_num" name="s2_ooc_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0"></td>
+                <td><input type="number" id="s2_ooc_num" name="s2_ooc_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0" disabled></td>
               </tr>
             </tbody>
           </table>
@@ -382,13 +382,13 @@
                 <input type="text" id="s2_otc_des" name="s2_otc_des" placeholder="Otro técnico calificado, especificar:" class="form-control rounded-0">
               </td>
               <td>
-                <select name="s2_otc_dsp" id="s2_otc_dsp" class="form-select rounded-0">
+                <select name="s2_otc_dsp" id="s2_otc_dsp" class="form-select rounded-0" disabled>
                   <option value="C">Crítico</option>
                   <option value="M">Muy crítico</option>
                   <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" id="s2_otc_num" name="s2_otc_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
+              <td><input type="number" id="s2_otc_num" name="s2_otc_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0" disabled></td>
             </tr>
           </tbody>
         </table>
@@ -448,13 +448,13 @@
                 <input type="text" id="s3_ooc_des" name="s3_ooc_des" placeholder="Otro operario calificado, especificar:" class="form-control rounded-0">
               </td>
               <td>
-                <select name="s3_ooc_dsp" id="s3_ooc_dsp" class="form-select rounded-0">
+                <select name="s3_ooc_dsp" id="s3_ooc_dsp" class="form-select rounded-0" disabled>
                   <option value="C">Crítico</option>
                   <option value="M">Muy crítico</option>
                   <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" id="s3_ooc_num" name="s3_ooc_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
+              <td><input type="number" id="s3_ooc_num" name="s3_ooc_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0" disabled></td>
             </tr>
           </tbody>
         </table>
@@ -528,13 +528,13 @@
                 <input type="text" id="s3_otc_des" name="s3_otc_des" placeholder="Otro técnico calificado, especificar:" class="form-control rounded-0">
               </td>
               <td>
-                <select name="s3_otc_dsp" id="s3_otc_dsp" class="form-select rounded-0">
+                <select name="s3_otc_dsp" id="s3_otc_dsp" class="form-select rounded-0" disabled>
                   <option value="C">Crítico</option>
                   <option value="M">Muy crítico</option>
                   <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" id="s3_otc_num" name="s3_otc_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
+              <td><input type="number" id="s3_otc_num" name="s3_otc_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0" disabled></td>
             </tr>
           </tbody>
         </table>
@@ -542,7 +542,7 @@
       </div> <!-- ./card-body -->
     </div> <!-- ./card -->
 
-    <div class="card">
+    <div class="card my-3">
       <div class="card-header bg-header p-3">
         <h5 class="mb-0">IV. Información de puestos transversales</h5>
       </div>
@@ -595,13 +595,13 @@
                 <input type="text" id="s4_ooc_des" name="s4_ooc_des" placeholder="Otro operario calificado, especificar:" class="form-control rounded-0">
               </td>
               <td>
-                <select name="s4_ooc_dsp" id="s4_ooc_dsp" class="form-select rounded-0">
+                <select name="s4_ooc_dsp" id="s4_ooc_dsp" class="form-select rounded-0" disabled>
                   <option value="C">Crítico</option>
                   <option value="M">Muy crítico</option>
                   <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" id="s4_ooc_num" name="s4_ooc_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
+              <td><input type="number" id="s4_ooc_num" name="s4_ooc_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0" disabled></td>
             </tr>
           </tbody>
         </table>
@@ -642,13 +642,13 @@
                 <input type="text" id="s4_otc_des" name="s4_otc_des" placeholder="Otro técnico calificado, especificar:" class="form-control rounded-0">
               </td>
               <td>
-                <select name="s4_otc_dsp" id="s4_otc_dsp" class="form-select rounded-0">
+                <select name="s4_otc_dsp" id="s4_otc_dsp" class="form-select rounded-0" disabled>
                   <option value="C">Crítico</option>
                   <option value="M">Muy crítico</option>
                   <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" id="s4_otc_num" name="s4_otc_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0"></td>
+              <td><input type="number" id="s4_otc_num" name="s4_otc_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0" disabled></td>
             </tr>
           </tbody>
         </table>
@@ -662,6 +662,92 @@
     </div> <!-- ./card -->
 
   </div> <!-- .container -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      //Función de referencia directa
+      function $(object){ return document.querySelector(`#${object}`) }
+
+      //Especificación para S2
+      $('s2_ooc_des').addEventListener('keyup', (event) => {
+        if ($('s2_ooc_des').value == '') {
+          $('s2_ooc_dsp').value = 'C'
+          $('s2_ooc_dsp').setAttribute('disabled', true)
+          $('s2_ooc_num').value = 0
+          $('s2_ooc_num').setAttribute('disabled', true)
+        }else{
+          $('s2_ooc_dsp').removeAttribute('disabled')
+          $('s2_ooc_num').removeAttribute('disabled')
+        }
+      })
+
+      //Especificación para S2
+      $('s2_otc_des').addEventListener('keyup', (event) => {
+        if ($('s2_otc_des').value == ''){
+          $('s2_otc_dsp').value = 'C'
+          $('s2_otc_dsp').setAttribute('disabled', true)
+          $('s2_otc_num').value = 0
+          $('s2_otc_num').setAttribute('disabled', true)
+        }else{
+          $('s2_otc_dsp').removeAttribute('disabled')
+          $('s2_otc_num').removeAttribute('disabled')
+        }
+      })
+
+      //Especificación para S3
+      $('s3_ooc_des').addEventListener('keyup', (event) => {
+        if ($('s3_ooc_des').value == ''){
+          $('s3_ooc_dsp').value = 'C'
+          $('s3_ooc_dsp').setAttribute('disabled', true)
+          $('s3_ooc_num').value = 0
+          $('s3_ooc_num').setAttribute('disabled', true)
+        }else{
+          $('s3_ooc_dsp').removeAttribute('disabled')
+          $('s3_ooc_num').removeAttribute('disabled')
+        }
+      })
+
+      //Especificación para S3
+      $('s3_otc_des').addEventListener('keyup', (event) => {
+        if ($('s3_otc_des').value == ''){
+          $('s3_otc_dsp').value = 'C'
+          $('s3_otc_dsp').setAttribute('disabled', true)
+          $('s3_otc_num').value = 0
+          $('s3_otc_num').setAttribute('disabled', true)
+        }else{
+          $('s3_otc_dsp').removeAttribute('disabled')
+          $('s3_otc_num').removeAttribute('disabled')
+        }
+      })
+
+      //Especificación para S4
+      $('s4_ooc_des').addEventListener('keyup', (event) => {
+        if ($('s4_ooc_des').value == ''){
+          $('s4_ooc_dsp').value = 'C'
+          $('s4_ooc_dsp').setAttribute('disabled', true)
+          $('s4_ooc_num').value = 0
+          $('s4_ooc_num').setAttribute('disabled', true)
+        }else{
+          $('s4_ooc_dsp').removeAttribute('disabled')
+          $('s4_ooc_num').removeAttribute('disabled')
+        }
+      })
+
+      //Especificación para S4
+      $('s4_otc_des').addEventListener('keyup', (event) => {
+        if ($('s4_otc_des').value == ''){
+          $('s4_otc_dsp').value = 'C'
+          $('s4_otc_dsp').setAttribute('disabled', true)
+          $('s4_otc_num').value = 0
+          $('s4_otc_num').setAttribute('disabled', true)
+        }else{
+          $('s4_otc_dsp').removeAttribute('disabled')
+          $('s4_otc_num').removeAttribute('disabled')
+        }
+      })
+
+    })
+  </script>
 
 </body>
 
