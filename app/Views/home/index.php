@@ -115,13 +115,13 @@
           </div>
           <div class="col-md-6">
             <div class="form-floating">
-              <input type="text" id="razonsocial" class="form-control">
+              <input type="text" id="razonsocial" name="razonsocial" class="form-control">
               <label for="razonsocial">Razon social</label>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-floating">
-              <input type="text" id="nombrecomercial" class="form-control">
+              <input type="text" id="nombrecomercial" name="nombrecomercial" class="form-control">
               <label for="nombrecomercial">Nombre comercial</label>
             </div>
           </div>
@@ -135,59 +135,57 @@
 
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="a">
-                      <label for="a" class="form-check-label mw">Arequipa</label>
+                      <input type="checkbox" class="form-check-input" id="arequipa" name="arequipa">
+                      <label for="arequipa" class="form-check-label mw">Arequipa</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="b">
-                      <label for="b" class="form-check-label mw">Ica</label>
+                      <input type="checkbox" class="form-check-input" id="ica" name="ica">
+                      <label for="ica" class="form-check-label mw">Ica</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="c">
-                      <label for="c" class="form-check-label mw">Junin</label>
+                      <input type="checkbox" class="form-check-input" id="junin" name="junin">
+                      <label for="junin" class="form-check-label mw">Junin</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="d">
-                      <label for="d" class="form-check-label mw">La Libertad</label>
+                      <input type="checkbox" class="form-check-input" id="lalibertad" name="lalibertad">
+                      <label for="lalibertad" class="form-check-label mw">La Libertad</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="e">
-                      <label for="e" class="form-check-label mw">Lambayeque</label>
+                      <input type="checkbox" class="form-check-input" id="lambayeque" name="lambayeque">
+                      <label for="lambayeque" class="form-check-label mw">Lambayeque</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="f">
-                      <label for="f" class="form-check-label mw">Piura</label>
+                      <input type="checkbox" class="form-check-input" id="piura" name="piura">
+                      <label for="piura" class="form-check-label mw">Piura</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="g">
-                      <label for="g" class="form-check-label mw">San Martín</label>
+                      <input type="checkbox" class="form-check-input" id="sanmartin" name="sanmartin"">
+                      <label for="sanmartin" class="form-check-label mw">San Martín</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="h">
-                      <label for="h" class="form-check-label mw">Tumbes</label>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="i">
-                      <label for="i" class="form-check-label mw">Otro</label>
+                      <input type="checkbox" class="form-check-input" id="tumbes" name="tumbes">
+                      <label for="tumbes" class="form-check-label mw">Tumbes</label>
                     </div>
                   </li>
                 </ul>
+                <div class="mt-2">
+                  <input type="text" class="form-control " placeholder="Otra zona (opcional)" id="otrazona" name="otrazona">
+                </div>
+
               </div> <!-- .card-body -->
             </div> <!-- .card -->
           </div> <!-- .col-md-6 -->
@@ -198,35 +196,38 @@
                 <ul class="list-group">
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="chkA">
-                      <label for="chkA" class="form-check-label mw">Arándano</label>
+                      <input type="checkbox" class="form-check-input" id="arandano" name="arandano">
+                      <label for="arandano" class="form-check-label mw">Arándano</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="chkB">
-                      <label for="chkB" class="form-check-label mw">Palta</label>
+                      <input type="checkbox" class="form-check-input" id="palta" name="palta">
+                      <label for="palta" class="form-check-label mw">Palta</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="chkC">
-                      <label for="chkC" class="form-check-label mw">Espárrago</label>
+                      <input type="checkbox" class="form-check-input" id="esparrago" name="esparrago">
+                      <label for="esparrago" class="form-check-label mw">Espárrago</label>
                     </div>
                   </li>
                   <li class="list-group-item bg-selected">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="chkD">
-                      <label for="chkD" class="form-check-label mw">Uva</label>
+                      <input type="checkbox" class="form-check-input" id="uva" name="uva">
+                      <label for="uva" class="form-check-label mw">Uva</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="chkE">
-                      <label for="chkE" class="form-check-label mw">Mango</label>
+                      <input type="checkbox" class="form-check-input" id="mango" name="mango">
+                      <label for="mango" class="form-check-label mw">Mango</label>
                     </div>
                   </li>
                 </ul>
+                <div class="mt-2">
+                  <input type="text" class="form-control" placeholder="Otro cultivo (opcional)" id="otrocultivo" name="otrocultivo">
+                </div>
               </div>
             </div>
           </div>
@@ -265,76 +266,70 @@
               <tr>
                 <td class="align-middle">Regador</td>
                 <td>
-                  <select name="" id="" class="form-select rounded-0">
-                    <option value="">Crítico</option>
-                    <option value="">Muy crítico</option>
-                    <option value="">Altamente crítico</option>
+                  <select name="s2_reg_dsp" id="s2_reg_dsp" class="form-select rounded-0">
+                    <option value="C">Crítico</option>
+                    <option value="M">Muy crítico</option>
+                    <option value="A">Altamente crítico</option>
                   </select>
                 </td>
-                <td><input type="number" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1"
-                    value="0"></td>
+                <td><input type="number" id="s2_reg_num" name="s2_reg_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
               </tr>
               <tr>
                 <td class="align-middle">Operador de sistemas de riego</td>
                 <td>
-                  <select name="" id="" class="form-select rounded-0">
-                    <option value="">Crítico</option>
-                    <option value="">Muy crítico</option>
-                    <option value="">Altamente crítico</option>
+                  <select name="s2_reg_num" id="s2_reg_num" class="form-select rounded-0">
+                    <option value="C">Crítico</option>
+                    <option value="M">Muy crítico</option>
+                    <option value="A">Altamente crítico</option>
                   </select>
                 </td>
-                <td><input type="number" class="form-control text-end rounded-0" min="0" maxlength="100" step="1"
-                    value="0"></td>
+                <td><input type="number" id="s2_osr_num" name="s2_osr_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0"></td>
               </tr>
               <tr>
                 <td class="align-middle">Evaluador fitosanitario</td>
                 <td>
-                  <select name="" id="" class="form-select rounded-0">
-                    <option value="">Crítico</option>
-                    <option value="">Muy crítico</option>
-                    <option value="">Altamente crítico</option>
+                  <select name="s2_efi_dsp" id="s2_efi_dsp" class="form-select rounded-0">
+                    <option value="C">Crítico</option>
+                    <option value="M">Muy crítico</option>
+                    <option value="A">Altamente crítico</option>
                   </select>
                 </td>
-                <td><input type="number" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1"
-                    value="0"></td>
+                <td><input type="number" id="s2_efi_num" name="s2_efi_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
               </tr>
               <tr>
                 <td class="align-middle">Aplicador fitosanitario</td>
                 <td>
-                  <select name="" id="" class="form-select rounded-0">
-                    <option value="">Crítico</option>
-                    <option value="">Muy crítico</option>
-                    <option value="">Altamente crítico</option>
+                  <select name="s2_afi_dsp" id="s2_afi_dsp" class="form-select rounded-0">
+                    <option value="C">Crítico</option>
+                    <option value="M">Muy crítico</option>
+                    <option value="A">Altamente crítico</option>
                   </select>
                 </td>
-                <td><input type="number" class="form-control text-end rounded-0" min="0" maxlength="100" step="1"
-                    value="0"></td>
+                <td><input type="number" id="s2_afi_num" name="s2_afi_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0"></td>
               </tr>
               <tr>
                 <td class="align-middle">Líderes de cosecha</td>
                 <td>
-                  <select name="" id="" class="form-select rounded-0">
-                    <option value="">Crítico</option>
-                    <option value="">Muy crítico</option>
-                    <option value="">Altamente crítico</option>
+                  <select name="s2_lco_dsp" id="s2_lco_dsp" class="form-select rounded-0">
+                    <option value="C">Crítico</option>
+                    <option value="M">Muy crítico</option>
+                    <option value="A">Altamente crítico</option>
                   </select>
                 </td>
-                <td><input type="number" class="form-control text-end rounded-0" min="0" maxlength="100" step="1"
-                    value="0"></td>
+                <td><input type="number" id="s2_lco_num" name="s2_lco_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0"></td>
               </tr>
               <tr>
                 <td class="align-middle">
-                  <input type="text" class="form-control rounded-0" placeholder="Otros, especificar:">
+                  <input type="text" id="s2_ooc_des" name="s2_ooc_des" class="form-control rounded-0" placeholder="Otro operario calificado, especificar:">
                 </td>
                 <td>
-                  <select name="" id="" class="form-select rounded-0">
-                    <option value="">Crítico</option>
-                    <option value="">Muy crítico</option>
-                    <option value="">Altamente crítico</option>
+                  <select name="s2_ooc_dsp" id="s2_ooc_dsp" class="form-select rounded-0">
+                    <option value="C">Crítico</option>
+                    <option value="M">Muy crítico</option>
+                    <option value="A">Altamente crítico</option>
                   </select>
                 </td>
-                <td><input type="number" class="form-control text-end rounded-0" min="0" maxlength="100" step="1"
-                    value="0"></td>
+                <td><input type="number" id="s2_ooc_num" name="s2_ooc_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0"></td>
               </tr>
             </tbody>
           </table>
@@ -363,40 +358,37 @@
             <tr>
               <td class="align-middle">Operador de maquinaria agrícola</td>
               <td>
-                <select name="" id="" class="form-select rounded-0">
-                  <option value="">Crítico</option>
-                  <option value="">Muy crítico</option>
-                  <option value="">Altamente crítico</option>
+                <select name="s2_oma_dsp" id="s2_oma_dsp" class="form-select rounded-0">
+                  <option value="C">Crítico</option>
+                  <option value="M">Muy crítico</option>
+                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1"
-                  value="0"></td>
+              <td><input type="number" id="s2_oma_num" name="s2_oma_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
             </tr>
             <tr>
               <td class="align-middle">Inspector de calidad de sistemas de riego</td>
               <td>
-                <select name="" id="" class="form-select rounded-0">
-                  <option value="">Crítico</option>
-                  <option value="">Muy crítico</option>
-                  <option value="">Altamente crítico</option>
+                <select name="s2_ins_dsp" id="s2_ins_dsp" class="form-select rounded-0">
+                  <option value="C">Crítico</option>
+                  <option value="M">Muy crítico</option>
+                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" class="form-control text-end rounded-0" min="0" maxlength="100" step="1"
-                  value="0"></td>
+              <td><input type="number" id="s2_ins_num" name="s2_ins_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0"></td>
             </tr>
             <tr>
               <td class="align-middle">
-                <input type="text" class="form-control rounded-0">
+                <input type="text" id="s2_otc_des" name="s2_otc_des" placeholder="Otro técnico calificado, especificar:" class="form-control rounded-0">
               </td>
               <td>
-                <select name="" id="" class="form-select rounded-0">
-                  <option value="">Crítico</option>
-                  <option value="">Muy crítico</option>
-                  <option value="">Altamente crítico</option>
+                <select name="s2_otc_dsp" id="s2_otc_dsp" class="form-select rounded-0">
+                  <option value="C">Crítico</option>
+                  <option value="M">Muy crítico</option>
+                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1"
-                  value="0"></td>
+              <td><input type="number" id="s2_otc_num" name="s2_otc_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
             </tr>
           </tbody>
         </table>
@@ -432,40 +424,37 @@
             <tr>
               <td class="align-middle">Operadores de montacarga</td>
               <td>
-                <select name="" id="" class="form-select rounded-0">
-                  <option value="">Crítico</option>
-                  <option value="">Muy crítico</option>
-                  <option value="">Altamente crítico</option>
+                <select name="s3_omo_dsp" id="s3_omo_dsp" class="form-select rounded-0">
+                  <option value="C">Crítico</option>
+                  <option value="M">Muy crítico</option>
+                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1"
-                  value="0"></td>
+              <td><input type="number" id="s3_omo_num" name="s3_omo_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
             </tr>
             <tr>
               <td class="align-middle">Operador de sistemas de riego</td>
               <td>
-                <select name="" id="" class="form-select rounded-0">
-                  <option value="">Crítico</option>
-                  <option value="">Muy crítico</option>
-                  <option value="">Altamente crítico</option>
+                <select name="s3_osr_dsp" id="s3_osr_dsp" class="form-select rounded-0">
+                  <option value="C">Crítico</option>
+                  <option value="M">Muy crítico</option>
+                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" class="form-control text-end rounded-0" min="0" maxlength="100" step="1"
-                  value="0"></td>
+              <td><input type="number" id="s3_osr_num" name="s3_osr_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0"></td>
             </tr>
             <tr>
               <td class="align-middle">
-                <input type="text" class="form-control rounded-0">
+                <input type="text" id="s3_ooc_des" name="s3_ooc_des" placeholder="Otro operario calificado, especificar:" class="form-control rounded-0">
               </td>
               <td>
-                <select name="" id="" class="form-select rounded-0">
-                  <option value="">Crítico</option>
-                  <option value="">Muy crítico</option>
-                  <option value="">Altamente crítico</option>
+                <select name="s3_ooc_dsp" id="s3_ooc_dsp" class="form-select rounded-0">
+                  <option value="C">Crítico</option>
+                  <option value="M">Muy crítico</option>
+                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1"
-                  value="0"></td>
+              <td><input type="number" id="s3_ooc_num" name="s3_ooc_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
             </tr>
           </tbody>
         </table>
@@ -493,64 +482,59 @@
             <tr>
               <td class="align-middle">Frigoristas</td>
               <td>
-                <select name="" id="" class="form-select rounded-0">
-                  <option value="">Crítico</option>
-                  <option value="">Muy crítico</option>
-                  <option value="">Altamente crítico</option>
+                <select name="s3_fri_dsp" id="s3_fri_dsp" class="form-select rounded-0">
+                  <option value="C">Crítico</option>
+                  <option value="M">Muy crítico</option>
+                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1"
-                  value="0"></td>
+              <td><input type="number" id="s3_fri_num" name="s3_fri_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
             </tr>
             <tr>
               <td class="align-middle">Calderista</td>
               <td>
-                <select name="" id="" class="form-select rounded-0">
-                  <option value="">Crítico</option>
-                  <option value="">Muy crítico</option>
-                  <option value="">Altamente crítico</option>
+                <select name="s3_cal_dsp" id="s3_cal_dsp" class="form-select rounded-0">
+                  <option value="C">Crítico</option>
+                  <option value="M">Muy crítico</option>
+                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" class="form-control text-end rounded-0" min="0" maxlength="100" step="1"
-                  value="0"></td>
+              <td><input type="number" id="s3_cal_num" name="s3_cal_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0"></td>
             </tr>
             <tr>
               <td class="align-middle">Auxiliar de producción</td>
               <td>
-                <select name="" id="" class="form-select rounded-0">
-                  <option value="">Crítico</option>
-                  <option value="">Muy crítico</option>
-                  <option value="">Altamente crítico</option>
+                <select name="s3_aux_dsp" id="s3_aux_dsp" class="form-select rounded-0">
+                  <option value="C">Crítico</option>
+                  <option value="M">Muy crítico</option>
+                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1"
-                  value="0"></td>
+              <td><input type="number" id="s3_aux_num" name="s3_aux_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
             </tr>
             <tr>
               <td class="align-middle">Inspector de calidad</td>
               <td>
-                <select name="" id="" class="form-select rounded-0">
-                  <option value="">Crítico</option>
-                  <option value="">Muy crítico</option>
-                  <option value="">Altamente crítico</option>
+                <select name="s3_ica_dsp" id="s3_ica_dsp" class="form-select rounded-0">
+                  <option value="C">Crítico</option>
+                  <option value="M">Muy crítico</option>
+                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1"
-                  value="0"></td>
+              <td><input type="number" id="s3_ica_num" name="s3_ica_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
             </tr>
             <tr>
               <td class="align-middle">
-                <input type="text" class="form-control rounded-0">
+                <input type="text" id="s3_otc_des" name="s3_otc_des" placeholder="Otro técnico calificado, especificar:" class="form-control rounded-0">
               </td>
               <td>
-                <select name="" id="" class="form-select rounded-0">
-                  <option value="">Crítico</option>
-                  <option value="">Muy crítico</option>
-                  <option value="">Altamente crítico</option>
+                <select name="s3_otc_dsp" id="s3_otc_dsp" class="form-select rounded-0">
+                  <option value="C">Crítico</option>
+                  <option value="M">Muy crítico</option>
+                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1"
-                  value="0"></td>
+              <td><input type="number" id="s3_otc_num" name="s3_otc_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
             </tr>
           </tbody>
         </table>
@@ -562,6 +546,7 @@
       <div class="card-header bg-header p-3">
         <h5 class="mb-0">IV. Información de puestos transversales</h5>
       </div>
+
       <div class="card-body">
         <div class="bd-callout bd-callout-primary mb-2">
           <p class="mb-0">Grupo ocupacional - <strong>Operario calificado</strong></p>
@@ -586,40 +571,37 @@
             <tr>
               <td class="align-middle">Digitador</td>
               <td>
-                <select name="" id="" class="form-select rounded-0">
-                  <option value="">Crítico</option>
-                  <option value="">Muy crítico</option>
-                  <option value="">Altamente crítico</option>
+                <select name="s4_dig_dsp" id="s4_dig_dsp" class="form-select rounded-0">
+                  <option value="C">Crítico</option>
+                  <option value="M">Muy crítico</option>
+                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1"
-                  value="0"></td>
+              <td><input type="number" id="s4_dig_num" name="s4_dig_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
             </tr>
             <tr>
               <td class="align-middle">Operario de aplicaciones</td>
               <td>
-                <select name="" id="" class="form-select rounded-0">
-                  <option value="">Crítico</option>
-                  <option value="">Muy crítico</option>
-                  <option value="">Altamente crítico</option>
+                <select name="s4_oap_dsp" id="s4_oap_dsp" class="form-select rounded-0">
+                  <option value="C">Crítico</option>
+                  <option value="M">Muy crítico</option>
+                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" class="form-control text-end rounded-0" min="0" maxlength="100" step="1"
-                  value="0"></td>
+              <td><input type="number" id="s4_oap_num" name="s4_oap_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0"></td>
             </tr>
             <tr>
               <td class="align-middle">
-                <input type="text" class="form-control rounded-0">
+                <input type="text" id="s4_ooc_des" name="s4_ooc_des" placeholder="Otro operario calificado, especificar:" class="form-control rounded-0">
               </td>
               <td>
-                <select name="" id="" class="form-select rounded-0">
-                  <option value="">Crítico</option>
-                  <option value="">Muy crítico</option>
-                  <option value="">Altamente crítico</option>
+                <select name="s4_ooc_dsp" id="s4_ooc_dsp" class="form-select rounded-0">
+                  <option value="C">Crítico</option>
+                  <option value="M">Muy crítico</option>
+                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1"
-                  value="0"></td>
+              <td><input type="number" id="s4_ooc_num" name="s4_ooc_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
             </tr>
           </tbody>
         </table>
@@ -647,34 +629,33 @@
             <tr>
               <td class="align-middle">Auxiliar administrativo</td>
               <td>
-                <select name="" id="" class="form-select rounded-0">
-                  <option value="">Crítico</option>
-                  <option value="">Muy crítico</option>
-                  <option value="">Altamente crítico</option>
+                <select name="s4_aux_dsp" id="s4_aux_dsp" class="form-select rounded-0">
+                  <option value="C">Crítico</option>
+                  <option value="M">Muy crítico</option>
+                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1"
-                  value="0"></td>
+              <td><input type="number" id="s4_aux_num" name="s4_aux_num" class="form-control rounded-0 text-end" min="0" maxlength="100" step="1" value="0"></td>
             </tr>
             <tr>
               <td class="align-middle">
-                <input type="text" class="form-control rounded-0">
+                <input type="text" id="s4_otc_des" name="s4_otc_des" placeholder="Otro técnico calificado, especificar:" class="form-control rounded-0">
               </td>
               <td>
-                <select name="" id="" class="form-select rounded-0">
-                  <option value="">Crítico</option>
-                  <option value="">Muy crítico</option>
-                  <option value="">Altamente crítico</option>
+                <select name="s4_otc_dsp" id="s4_otc_dsp" class="form-select rounded-0">
+                  <option value="C">Crítico</option>
+                  <option value="M">Muy crítico</option>
+                  <option value="A">Altamente crítico</option>
                 </select>
               </td>
-              <td><input type="number" class="form-control text-end rounded-0" min="0" maxlength="100" step="1"
-                  value="0"></td>
+              <td><input type="number" id="s4_otc_num" name="s4_otc_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0"></td>
             </tr>
           </tbody>
         </table>
 
       </div> <!-- ./card-body -->
-      <div class="card-footer mb-3 text-end">
+
+      <div class="card-footer text-end">
         <button class="btn btn-outline-secondary" type="reset">Reiniciar</button>
         <button class="btn btn-primary" type="reset">Guardar</button>
       </div>
