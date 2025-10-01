@@ -280,7 +280,7 @@
               <tr>
                 <td class="align-middle">Operador de sistemas de riego</td>
                 <td>
-                  <select name="s2_reg_num" id="s2_reg_num" class="form-select rounded-0" required>
+                  <select name="s2_reg_num" id="s2_osr_dsp" class="form-select rounded-0" required>
                   </select>
                 </td>
                 <td><input type="number" id="s2_osr_num" name="s2_osr_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0" required></td>
