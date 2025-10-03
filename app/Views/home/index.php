@@ -141,49 +141,49 @@
 
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="arequipa" name="arequipa">
+                      <input type="checkbox" class="form-check-input" id="arequipa" name="arequipa" value="S">
                       <label for="arequipa" class="form-check-label mw">Arequipa</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="ica" name="ica">
+                      <input type="checkbox" class="form-check-input" id="ica" name="ica" value="S">
                       <label for="ica" class="form-check-label mw">Ica</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="junin" name="junin">
+                      <input type="checkbox" class="form-check-input" id="junin" name="junin" value="S">
                       <label for="junin" class="form-check-label mw">Junin</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="lalibertad" name="lalibertad">
+                      <input type="checkbox" class="form-check-input" id="lalibertad" name="lalibertad" value="S">
                       <label for="lalibertad" class="form-check-label mw">La Libertad</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="lambayeque" name="lambayeque">
+                      <input type="checkbox" class="form-check-input" id="lambayeque" name="lambayeque" value="S">
                       <label for="lambayeque" class="form-check-label mw">Lambayeque</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="piura" name="piura">
+                      <input type="checkbox" class="form-check-input" id="piura" name="piura" value="S">
                       <label for="piura" class="form-check-label mw">Piura</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="sanmartin" name="sanmartin"">
+                      <input type="checkbox" class="form-check-input" id="sanmartin" name="sanmartin" value="S">
                       <label for="sanmartin" class="form-check-label mw">San Martín</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="tumbes" name="tumbes">
+                      <input type="checkbox" class="form-check-input" id="tumbes" name="tumbes" value="S">
                       <label for="tumbes" class="form-check-label mw">Tumbes</label>
                     </div>
                   </li>
@@ -202,31 +202,31 @@
                 <ul class="list-group">
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="arandano" name="arandano">
+                      <input type="checkbox" class="form-check-input" id="arandano" name="arandano" value="S">
                       <label for="arandano" class="form-check-label mw">Arándano</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="palta" name="palta">
+                      <input type="checkbox" class="form-check-input" id="palta" name="palta" value="S">
                       <label for="palta" class="form-check-label mw">Palta</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="esparrago" name="esparrago">
+                      <input type="checkbox" class="form-check-input" id="esparrago" name="esparrago" value="S">
                       <label for="esparrago" class="form-check-label mw">Espárrago</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="uva" name="uva">
+                      <input type="checkbox" class="form-check-input" id="uva" name="uva" value="S">
                       <label for="uva" class="form-check-label mw">Uva</label>
                     </div>
                   </li>
                   <li class="list-group-item">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="mango" name="mango">
+                      <input type="checkbox" class="form-check-input" id="mango" name="mango" value="S">
                       <label for="mango" class="form-check-label mw">Mango</label>
                     </div>
                   </li>
@@ -280,7 +280,7 @@
               <tr>
                 <td class="align-middle">Operador de sistemas de riego</td>
                 <td>
-                  <select name="s2_reg_num" id="s2_osr_dsp" class="form-select rounded-0" required>
+                  <select name="s2_osr_dsp" id="s2_osr_dsp" class="form-select rounded-0" required>
                   </select>
                 </td>
                 <td><input type="number" id="s2_osr_num" name="s2_osr_num" class="form-control text-end rounded-0" min="0" maxlength="100" step="1" value="0" required></td>
@@ -680,7 +680,7 @@
       //Especificación para S2
       $('s2_ooc_des').addEventListener('keyup', (event) => {
         if ($('s2_ooc_des').value == '') {
-          $('s2_ooc_dsp').value = 'C'
+          $('s2_ooc_dsp').value = ''
           $('s2_ooc_dsp').setAttribute('disabled', true)
           $('s2_ooc_num').value = 0
           $('s2_ooc_num').setAttribute('disabled', true)
@@ -693,7 +693,7 @@
       //Especificación para S2
       $('s2_otc_des').addEventListener('keyup', (event) => {
         if ($('s2_otc_des').value == ''){
-          $('s2_otc_dsp').value = 'C'
+          $('s2_otc_dsp').value = ''
           $('s2_otc_dsp').setAttribute('disabled', true)
           $('s2_otc_num').value = 0
           $('s2_otc_num').setAttribute('disabled', true)
@@ -706,7 +706,7 @@
       //Especificación para S3
       $('s3_ooc_des').addEventListener('keyup', (event) => {
         if ($('s3_ooc_des').value == ''){
-          $('s3_ooc_dsp').value = 'C'
+          $('s3_ooc_dsp').value = ''
           $('s3_ooc_dsp').setAttribute('disabled', true)
           $('s3_ooc_num').value = 0
           $('s3_ooc_num').setAttribute('disabled', true)
@@ -719,7 +719,7 @@
       //Especificación para S3
       $('s3_otc_des').addEventListener('keyup', (event) => {
         if ($('s3_otc_des').value == ''){
-          $('s3_otc_dsp').value = 'C'
+          $('s3_otc_dsp').value = ''
           $('s3_otc_dsp').setAttribute('disabled', true)
           $('s3_otc_num').value = 0
           $('s3_otc_num').setAttribute('disabled', true)
@@ -732,7 +732,7 @@
       //Especificación para S4
       $('s4_ooc_des').addEventListener('keyup', (event) => {
         if ($('s4_ooc_des').value == ''){
-          $('s4_ooc_dsp').value = 'C'
+          $('s4_ooc_dsp').value = ''
           $('s4_ooc_dsp').setAttribute('disabled', true)
           $('s4_ooc_num').value = 0
           $('s4_ooc_num').setAttribute('disabled', true)
@@ -745,7 +745,7 @@
       //Especificación para S4
       $('s4_otc_des').addEventListener('keyup', (event) => {
         if ($('s4_otc_des').value == ''){
-          $('s4_otc_dsp').value = 'C'
+          $('s4_otc_dsp').value = ''
           $('s4_otc_dsp').setAttribute('disabled', true)
           $('s4_otc_num').value = 0
           $('s4_otc_num').setAttribute('disabled', true)

@@ -80,3 +80,5 @@ CREATE TABLE resultados
     s4_otc_num		SMALLINT NULL
     
 )ENGINE INNODB;
+
+SELECT * FROM resultados;
